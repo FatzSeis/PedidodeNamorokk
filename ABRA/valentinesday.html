@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey...</title>
+    <style>
+        .painel{
+            width: 680px;
+            height: 580px;
+            background-color: #dbdbdd;
+            margin-top: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 80px;
+           
+        }
+        h1{
+            padding-top: 1px;
+            font-size: 2.5rem;
+            letter-spacing: 20px;
+        }
+        body{
+            background-color: rgb(237, 127, 127);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+
+        }
+        #btnsim{
+            font-size: 1.5rem;
+            border-radius: 30%;
+            text-decoration: none;
+            outline: hidden;
+            background-color: rgb(231, 79, 79);
+            color: white;
+            height: 40px;
+            width: 70px;
+            border: none;
+            cursor: pointer;
+            transition: 0.6s;
+            border-bottom: hidden;
+            box-shadow: 0px 0px 40px #563030;
+            letter-spacing: 2px;
+            margin-right: 100px;
+
+        }
+        #btnsim:hover{
+            background-color:rgb(186, 43, 43);
+            transform: scale(1.2, 1.2);
+        }
+        #btnnao{
+            font-size: 1.5rem;
+            border-radius: 30%;
+            text-decoration: none;
+            outline: hidden;
+            background-color: rgb(231, 79, 79);
+            color: white;
+            height: 40px;
+            width: 70px;
+            border: none;
+            cursor: pointer;
+            transition: 0.6s;
+            position: absolute;
+            box-shadow: 0px 0px 40px #563030;
+            letter-spacing: 2px;
+            margin:0, 15px, 0, 40px;
+        }
+        #btnnao:hover{
+            background-color:rgb(186, 43, 43);
+            transform: scale(1.2, 1.2);
+        }
+        .imgcard{
+            width: 350px;
+            height: 350px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .imgcard:hover{
+            transform: scale(1.1, 1.1);
+        }
+        #text{
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="painel">
+        <h1>Oi Xovanna !</h1>
+        <img class="imgcard" src="Valentine's bouquet with a card-cuate.png" alt="coração ilustrativo" >
+        <h2 id="text">Voçê não cansa de me amar?</h2>
+        <button id="btnsim" onclick="clique()">Sim</button>
+        <button  id="btnnao" onmouseover="fuja()">Não</button><br>
+
+    </div>
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("btnnao")
+            var largurajanela = window.innerWidth;
+            var alturajanela = window.innerHeight;
+
+            var maxX = largurajanela - botaoNao.offsetWidth;
+            var maxY = alturajanela - botaoNao.offsetHeight;
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+            botaoNao.style.left = aleatorioX +"px";
+            botaoNao.style.top = aleatorioY +"px";
+        }
+        function clique(){
+            alert("Fez uma boa escolha :) , obrigado pelo amor");
+        }
+    </script>
+    
+</body>
+</html>
